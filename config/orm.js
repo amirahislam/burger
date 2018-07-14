@@ -34,15 +34,14 @@ var orm = {
 
   // insertOne()
   insertOne: function(burger_name, devoured) {
-    var queryString = "INSERT INTO burgers (burger_name, devoured) ";
+    var queryString = "INSERT INTO burgers (burger_name, devoured) VALUES ( \'";
 
-        queryString += "VALUES (";
-        queryString += "'"
         queryString += burger_name;
-        queryString += "'"
-        queryString += ", ";
-        queryString += devoured.toString();
-        queryString += ") ";
+        queryString += "\'";
+        queryString += " , "; 
+        queryString += devoured;
+        queryString += ")";
+        
 
     console.log(queryString);
 

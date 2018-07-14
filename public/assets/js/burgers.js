@@ -6,7 +6,7 @@ $(function(){
         event.preventDefault();
 
         var newBurger = {
-            burger_name: $('#submitburger').val() == undefined ? '' : $('#submitBurger').val().trim(),
+            burger_name: $('#submitBurger').val() == undefined ? '' : $('#submitBurger').val().trim(),
             devoured: false
         };
         console.log(newBurger);
