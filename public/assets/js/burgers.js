@@ -6,7 +6,7 @@ $(function(){
         event.preventDefault();
 
         var newBurger = {
-            burger_name: $('#submitburger').val().trim(),
+            burger_name: $('#submitburger').val() == undefined ? '' : $('#submitBurger').val().trim(),
             devoured: false
         };
         console.log(newBurger);
@@ -26,7 +26,7 @@ $(function(){
 
     $('.devour').on('click', function(event) {
         var id = $(this).data('id');
-        var newDevour = $(this).data('newDevoured');
+        var newDevour = $(this).data('newdevoured');
 
         newBurgerStatus = {
             devoured: newDevour
